@@ -1,0 +1,172 @@
+/* uprava textu a nadpisov */
+body {
+    font-family: Garamond, serif;
+    font-size: large;
+}
+
+.my-border {
+    border: 1px solid #ccc!important;
+    border-radius: 16px;
+    margin: 2px;
+}
+
+.my-right-margin {
+    margin-right: 16px;
+}
+
+.my-small-right-margin {
+    margin-right: 8px;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+.my-carousel-heading {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.my-link {
+    color: white;
+    text-decoration: none;
+}
+
+.my-link:hover {
+    color: gainsboro;
+}
+
+.my-article-heading {
+    margin: 16px 0 32px
+}
+
+@media (min-width: 601px) {
+    .my-article-heading {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .my-article-heading {
+        font-size: 30px;
+    }
+}
+
+.my-main-page-title {
+    margin: 8px 0 8px;
+    text-align: center;
+}
+
+.align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.my-article-top-text {
+    font-weight: bold;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .my-article-top-text {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 601px) {
+    .my-article-top-text {
+        font-size: 22px;
+    }
+}
+
+div {
+    display: block;
+}
+
+.my-body-text {
+    display: block;
+    margin-bottom: 16px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* uprava hlavicky a paty stranky */
+.my-footer {
+    background-color: rgba(240,241,242, 1)!important;
+}
+
+:root {
+    background-color: rgba(240,241,242, 1)!important;
+}
+
+.bg-light {
+    background-color: rgba(240,241,242, 1)!important;
+}
+
+/* uprava carouselu */
+.carousel-inner {
+    height: 50vw;
+    min-height: 300px;
+    max-height: 500px;
+}
+
+.carousel-item {
+    position: absolute !important; /* Bootstrap is insistent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.carousel-item img {
+    height: 100%; /* Bootstrap handles width already */
+    object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+}
+
+.carousel {
+    text-shadow: black 1px 0 10px;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: black;
+}
+
+/* uprava marketing containeru */
+.col-md-7 {
+    margin-bottom: 16px;
+}
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.my-marketing-img {
+    max-width: 100%;
+    height: 200px;
+}
