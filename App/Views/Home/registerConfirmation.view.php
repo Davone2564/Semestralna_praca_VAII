@@ -1,9 +1,5 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <div>
-                Gratulujem, bol si úspešne zaregistrovaný.
-            </div>
-        </div>
+    <div class="alert alert-success my-alert">
+        <strong>Gratulujem!</strong> Boli ste úspešne zaregistrovaný.
     </div>
 </div>

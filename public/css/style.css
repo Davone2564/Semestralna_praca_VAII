@@ -110,6 +110,11 @@ div {
     margin-right: 10%;
 }
 
+.my-alert {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 /* uprava hlavicky a paty stranky */
 .my-footer {
     background-color: rgba(240,241,242, 1)!important;
