@@ -85,6 +85,6 @@ class DummyAuthenticator implements IAuthenticator
      */
     public function getLoggedUserId(): mixed
     {
-        return $_SESSION['user'];
+        return $_SESSION['userID'];
     }
 }

@@ -30,7 +30,7 @@ $layout = 'offer';
                     <div class="m-2">
                         <strong>Cena za jednu noc: </strong><?= $offer->getPrice() . " eur" ?>
                     </div>
-                    <?php if ($auth->isLogged() && $auth->getLoggedUserName() == $offer->getAuthor()) { ?>
+                    <?php if ($auth->isLogged() && $auth->getLoggedUserId() == $offer->getAuthorID()) { ?>
                         <div class="m-2 d-flex gap-2 justify-content-end">
                             <a href="<?= $link->url('offer.edit', ['id' => $offer->getId()]) ?>" class="btn btn-primary">Upraviť</a>
                             <a href="<?= $link->url('offer.delete', ['id' => $offer->getId()]) ?>"  class="btn btn-danger">Zmazať</a>

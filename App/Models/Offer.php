@@ -13,7 +13,7 @@ class Offer extends Model
     protected ?string $contact;
     protected ?int $price;
 
-    protected ?string $author;
+    protected ?int $authorID;
 
     public function getId(): ?int
     {
@@ -74,13 +74,13 @@ class Offer extends Model
         $this->price = $price;
     }
 
-    public function getAuthor(): ?string
+    public function getAuthorID(): ?string
     {
-        return $this->author;
+        return $this->authorID;
     }
 
-    public function setAuthor(?string $author): void
+    public function setAuthorID(?string $authorID): void
     {
-        $this->author = $author;
+        $this->authorID = $authorID;
     }
 }

@@ -59,7 +59,7 @@ class OfferController extends AControllerBase
         $offer->setLocation($this->request()->getValue('location'));
         $offer->setContact($this->request()->getValue('contact'));
         $offer->setPrice($this->request()->getValue('price'));
-        $offer->setAuthor($this->app->getAuth()->getLoggedUserName());
+        $offer->setAuthorID($this->app->getAuth()->getLoggedUserId());
 
         if ($edit) {
             $formErrors = $this->formErrors(true);
