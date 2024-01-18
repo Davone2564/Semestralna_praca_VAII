@@ -65,7 +65,9 @@ class AuthController extends AControllerBase
         $user = new User();
         $user->setEmail($formData['email']);
         $user->setUsername($formData['login']);
-        $user->setPassword($formData['password']);
+        //zadane heslo zahesujeme a ulozime
+        $hash = password_hash($formData['password'], PASSWORD_BCRYPT);
+        $user->setPassword($hash);
         if (isset($formData['submit'])) {
             $users = User::getAll();
             foreach ($users as $value) {

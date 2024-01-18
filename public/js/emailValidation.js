@@ -1,7 +1,7 @@
 let emailField = document.getElementById("email");
 let errorMsg = document.getElementById("error-msg");
 let button = document.getElementById("button");
-let mailRegex = /^[a-zA-Z][a-zA-Z0-9\-_.]+@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}$/;
+let mailRegex = /^[a-zA-Z][a-zA-Z0-9\-_.]+@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}\.?[a-zA-Z0-9]{0,}$/;
 
 function checkEmail() {
     if (mailRegex.test(emailField.value)) {

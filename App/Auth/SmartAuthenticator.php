@@ -22,7 +22,7 @@ class SmartAuthenticator extends DummyAuthenticator
     {
         $users = User::getAll();
         foreach ($users as $user) {
-            if ($user->getUsername() == $login && $user->getPassword() == $password) {
+            if ($user->getUsername() == $login && password_verify($password, $user->getPassword())) {
                 $_SESSION['user'] = $login;
                 $_SESSION['userID'] = $user->getId();
                 return true;
