@@ -67,30 +67,16 @@ class AuthController extends AControllerBase
         $user->setUsername($formData['login']);
         $user->setPassword($formData['password']);
         if (isset($formData['submit'])) {
-            $firstOccurence = stripos($formData['email'], '@');
-            $numberOfOccurences = substr_count($formData['email'], '@');
-            //kontrolujeme ci sa nachadza v emaily len jeden zavinac
-            if ($numberOfOccurences == 1) {
-                //kontrolujeme ci pred zavinacom aj za nim su nejake znaky
-                if ($firstOccurence != 0 && $firstOccurence != strlen($formData['email']) - 1) {
-                    $users = User::getAll();
-                    foreach ($users as $value) {
-                        if ($user->getEmail() == $value->getEmail()) {
-                            $data = ['message' => 'Používateľ s daným e-mailom už existuje'];
-                            return $this->html($data, 'registration');
-                        }
-                    }
-                    $registrated = true;
-                    $user->save();
-                    return $this->redirect($this->url("home.registerConfirmation"));
-                } else {
-                    $registrated = false;
+            $users = User::getAll();
+            foreach ($users as $value) {
+                if ($user->getEmail() == $value->getEmail()) {
+                    $data = ['message' => 'Používateľ s daným e-mailom už existuje'];
+                    return $this->html($data, 'registration');
                 }
-            } else {
-                $registrated = false;
             }
+            $registrated = true;
+            $user->save();
+            return $this->redirect($this->url("home.registerConfirmation"));
         }
-        $data = ($registrated === false ? ['message' => 'E-mail je v nesprávnom tvare!'] : []);
-        return $this->html($data, 'registration');
     }
 }

@@ -17,7 +17,6 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="public/css/style.css">
-    <script src="public/js/script.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="Third navbar example">

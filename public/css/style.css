@@ -175,3 +175,10 @@ div {
     max-width: 100%;
     height: 200px;
 }
+
+/* uprava registracneho formularu */
+.my-error-message {
+    display: none;
+    color: red;
+}
+
