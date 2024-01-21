@@ -18,29 +18,33 @@
         </div>
     <?php } ?>
 
+    <div class="row">
     <?php foreach ($data['countries'] as $country): ?>
-    <div class="my-countries-row my-justify-center my-margin-bottom">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="<?= \App\Helpers\FileStorage::UPLOAD_DIR . '/' . $country->getFlag()?>" alt="Flag" style="width:350px;height:200px;">
-                </div>
-                <div class="flip-card-back">
-                    <h1><?= $country->getName()?></h1>
-                    <p class="my-country-label"><strong>Hlavné mesto: </strong><?= $country->getCapitalCity()?></p>
-                    <p class="my-country-label"><strong>Počet obyvateľov: </strong><?= number_format($country->getPopulation(), 0, '.', ' ')?></p>
-                    <p class="my-country-label"><strong>Rozloha: </strong><?= number_format($country->getArea(), 0, '.', ' ') ?> km²</p>
+        <div class="col-lg-4 col-md-6 col-xs-12 d-flex flex-column">
+            <div class="my-countries-row my-justify-center my-margin-bottom">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="<?= \App\Helpers\FileStorage::UPLOAD_DIR . '/' . $country->getFlag()?>" alt="Flag" style="width:325px;height:200px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1><?= $country->getName()?></h1>
+                            <p class="my-country-label"><strong>Hlavné mesto: </strong><?= $country->getCapitalCity()?></p>
+                            <p class="my-country-label"><strong>Počet obyvateľov: </strong><?= number_format($country->getPopulation(), 0, '.', ' ')?></p>
+                            <p class="my-country-label"><strong>Rozloha: </strong><?= number_format($country->getArea(), 0, '.', ' ') ?> km²</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-        <div class="m-2 d-flex my-justify-center gap-2">
-            <?php if ($auth->getIfLoggedUserIsAdmin()) { ?>
-                <div>
-                    <a href="<?= $link->url('country.edit', ['id' => $country->getId()]) ?>" class="btn btn-primary">Upraviť</a>
-                    <a href="<?= $link->url('country.delete', ['id' => $country->getId()]) ?>"  class="btn btn-danger">Zmazať</a>
-                </div>
-            <?php } ?>
+            <div class="m-2 d-flex my-justify-center gap-2">
+                <?php if ($auth->getIfLoggedUserIsAdmin()) { ?>
+                    <div>
+                        <a href="<?= $link->url('country.edit', ['id' => $country->getId()]) ?>" class="btn btn-primary">Upraviť</a>
+                        <a href="<?= $link->url('country.delete', ['id' => $country->getId()]) ?>"  class="btn btn-danger">Zmazať</a>
+                    </div>
+                <?php } ?>
+            </div>
         </div>
     <?php endforeach; ?>
+    </div>
 </div>
