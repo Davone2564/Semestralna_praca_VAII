@@ -74,6 +74,15 @@
                 <?php if ($auth->isLogged()) { ?>
                     <span class="navbar-text my-small-right-margin">Prihlásený používateľ: <b><?= $auth->getLoggedUserName() ?></b></span>
                     <ul class="navbar-nav ms-auto">
+                        <?php if ($auth->getIfLoggedUserIsAdmin()) { ?>
+                            <li class="nav-item my-border">
+                                <a class="nav-link" href="<?= $link->url("auth.userManagement") ?>">Správa používateľov</a>
+                            </li>
+                        <?php } ?>
+                        <li class="nav-item my-border">
+                            <a class="nav-link" href="<?= $link->url("auth.profile", ['id' => $auth->getLoggedUserId()]) ?>">Profil</a>
+                        </li>
+
                         <li class="nav-item my-border">
                             <a class="nav-link" href="<?= $link->url("auth.logout") ?>">Odhlásiť</a>
                         </li>

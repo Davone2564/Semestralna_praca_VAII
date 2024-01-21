@@ -90,4 +90,59 @@ class AuthController extends AControllerBase
     {
         return $this->html();
     }
+
+    public function profile(): Response
+    {
+        $id = (int) $this->request()->getValue('id');
+
+        $user = User::getOne($id);
+
+        return $this->html(
+            [
+                'user' => $user
+            ]
+        );
+    }
+
+    public function passwordChange(): Response
+    {
+        return $this->html();
+    }
+
+    public function savePassword(): Response
+    {
+        $formData = $this->app->getRequest()->getPost();
+        $user = User::getOne($formData['id']);
+
+        if (!password_verify($formData['oldPassword'], $user->getPassword())) {
+            $data = ['message' => 'Zadali ste nesprávne heslo'];
+            return $this->html($data, 'passwordChange');
+        }
+        $hash = password_hash($formData['password'], PASSWORD_BCRYPT);
+        $user->setPassword($hash);
+        $user->save();
+        return $this->redirect($this->url("auth.passwordChangeConfirmation"));
+    }
+
+    public function passwordChangeConfirmation(): Response
+    {
+        return $this->html();
+    }
+
+    public function userManagement(): Response
+    {
+        return $this->html(
+            [
+                'users' => User::getAll()
+            ]
+        );
+    }
+
+    public function deleteUser(): Response
+    {
+        $id = (int) $this->request()->getValue('id');
+        $user = User::getOne($id);
+        $user->delete();
+        return $this->redirect($this->url("auth.userManagement"));
+    }
 }

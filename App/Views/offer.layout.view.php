@@ -72,13 +72,14 @@
             <!-- odstranili sme me-auto potom nam to zarovna doprava -->
             <ul class="navbar-nav mb-2 mb-sm-0">
                 <?php if ($auth->isLogged()) { ?>
-                <li class="nav-item my-border my-right-margin">
-                    <a class="nav-link" href="<?= $link->url("offer.add") ?>">Pridať ubytovaciu ponuku</a>
-                </li>
-                <?php } ?>
-                <?php if ($auth->isLogged()) { ?>
+                    <li class="nav-item my-border my-right-margin">
+                        <a class="nav-link" href="<?= $link->url("offer.add") ?>">Pridať ubytovaciu ponuku</a>
+                    </li>
                     <span class="navbar-text my-small-right-margin">Prihlásený používateľ: <b><?= $auth->getLoggedUserName() ?></b></span>
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item my-border">
+                            <a class="nav-link" href="<?= $link->url("auth.profile", ['id' => $auth->getLoggedUserId()]) ?>">Profil</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link my-border" href="<?= $link->url("auth.logout") ?>">Odhlásiť</a>
                         </li>
