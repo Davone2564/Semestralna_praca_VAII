@@ -17,7 +17,11 @@ class OfferController extends AControllerBase
      */
     public function index(): Response
     {
-        return $this->html();
+        return $this->html(
+            [
+                'offers' => Offer::getAll()
+            ]
+        );
     }
 
     public function add(): Response
@@ -91,7 +95,7 @@ class OfferController extends AControllerBase
                 $offer->setPicture($newFileName);
             }
             $offer->save();
-            return new RedirectResponse($this->url("home.offers"));
+            return new RedirectResponse($this->url("offer.index"));
         }
     }
 

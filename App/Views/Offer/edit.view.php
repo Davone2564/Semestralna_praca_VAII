@@ -6,7 +6,7 @@
 ?>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-6 d-flex gap-4  flex-column">
+        <div class="col-sm-9 col-md-7 col-lg-5 d-flex gap-4  flex-column">
             <h1>Úprava ubytovacej ponuky</h1>
 
             <?php if (!is_null(@$data['errors'])): ?>

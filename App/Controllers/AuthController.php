@@ -75,10 +75,19 @@ class AuthController extends AControllerBase
                     $data = ['message' => 'Používateľ s daným e-mailom už existuje'];
                     return $this->html($data, 'registration');
                 }
+                if ($user->getUsername() == $value->getUsername()) {
+                    $data = ['message' => 'Používateľ s daným loginom už existuje'];
+                    return $this->html($data, 'registration');
+                }
             }
             $registrated = true;
             $user->save();
-            return $this->redirect($this->url("home.registerConfirmation"));
+            return $this->redirect($this->url("auth.registerConfirmation"));
         }
+    }
+
+    public function registerConfirmation(): Response
+    {
+        return $this->html();
     }
 }

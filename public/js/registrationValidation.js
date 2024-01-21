@@ -19,3 +19,23 @@ function checkEmail() {
         button.disabled = true;
     }
 }
+
+let usernameField = document.getElementById("login");
+let usernameRegex = /^[a-zA-Z0-9\-_.]{3,}$/;
+let errorMsgLogin = document.getElementById("error-msg-login");
+function checkUsername() {
+    if (usernameRegex.test(usernameField.value)) {
+        errorMsgLogin.style.display = "none";
+        usernameField.style.borderColor = "#dee2e6";
+        button.disabled = false;
+    } else if(usernameField.value == "") {
+        errorMsgLogin.style.display = "none";
+        usernameField.style.borderColor = "#dee2e6";
+        button.disabled = true;
+    } else {
+        errorMsgLogin.style.display = "block";
+        errorMsgLogin.style.color = "#DC3545";
+        usernameField.style.borderColor = "#DC3545";
+        button.disabled = true;
+    }
+}

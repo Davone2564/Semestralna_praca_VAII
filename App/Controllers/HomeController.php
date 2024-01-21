@@ -40,18 +40,4 @@ class HomeController extends AControllerBase
     {
         return $this->html();
     }
-
-    public function registerConfirmation(): Response
-    {
-        return $this->html();
-    }
-
-    public function offers(): Response
-    {
-        return $this->html(
-            [
-                'offers' => Offer::getAll()
-            ]
-        );
-    }
 }

@@ -4,7 +4,7 @@
 /** @var \App\Core\LinkGenerator $link */
 ?>
 <header>
-    <script src="public/js/emailValidation.js" defer></script>
+    <script src="public/js/registrationValidation.js" defer></script>
 </header>
 <div class="container">
     <div class="row">
@@ -25,8 +25,9 @@
 
                         <label for="login"><b>Prihlasovacie meno</b></label>
                         <div class="form-label-group mb-3">
-                            <input name="login" type="text" id="login" class="form-control" placeholder="Zadajte login"
+                            <input name="login" oninput="checkUsername()" type="text" id="login" class="form-control" placeholder="Zadajte login"
                                    required autofocus>
+                            <p class="my-error-message" id="error-msg-login">Prihlasovacie meno musí obsahovať aspoň tri písmená a len povolené znaky</p>
                         </div>
 
                         <div class="form-label-group mb-3">

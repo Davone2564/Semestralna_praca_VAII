@@ -6,7 +6,7 @@
 ?>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-6 d-flex gap-4  flex-column">
+        <div class="col-sm-9 col-md-7 col-lg-5 d-flex gap-4  flex-column">
             <h1>Pridanie novej ubytovacej ponuky</h1>
 
             <?php if (!is_null(@$data['errors'])): ?>
@@ -47,7 +47,9 @@
                     <label for="price" class="form-label">Cena za jednu noc:</label>
                     <input name="price" type="number" id="price" class="form-control" placeholder="Zadajte cenu ubytovania" required autofocus>
                 </div>
-                <button type="submit" class="btn btn-primary">Uložiť</button>
+                <div class="my-justify-center">
+                    <button type="submit" class="btn btn-primary">Uložiť</button>
+                </div>
             </form>
 
 
