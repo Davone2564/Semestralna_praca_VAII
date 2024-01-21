@@ -1,4 +1,6 @@
+/*----------------------------------------------------*/
 /* uprava textu a nadpisov */
+/*----------------------------------------------------*/
 body {
     font-family: Garamond, serif;
     font-size: large;
@@ -115,7 +117,9 @@ div {
     margin-right: 10%;
 }
 
+/*----------------------------------------------------*/
 /* uprava hlavicky a paty stranky */
+/*----------------------------------------------------*/
 .my-footer {
     background-color: rgba(240,241,242, 1)!important;
 }
@@ -128,7 +132,9 @@ div {
     background-color: rgba(240,241,242, 1)!important;
 }
 
+/*----------------------------------------------------*/
 /* uprava carouselu */
+/*----------------------------------------------------*/
 .carousel-inner {
     height: 50vw;
     min-height: 300px;
@@ -156,7 +162,9 @@ div {
     background-color: black;
 }
 
+/*----------------------------------------------------*/
 /* uprava marketing containeru */
+/*----------------------------------------------------*/
 .col-md-7 {
     margin-bottom: 16px;
 }
@@ -171,23 +179,22 @@ div {
     justify-content: center;
 }
 
-.my-reviews-row {
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
 .my-marketing-img {
     max-width: 100%;
     height: 200px;
 }
 
+/*----------------------------------------------------*/
 /* uprava registracneho formularu */
+/*----------------------------------------------------*/
 .my-error-message {
     display: none;
     color: red;
 }
 
+/*----------------------------------------------------*/
 /* uprava zobrazovania ubytovacich ponuk */
+/*----------------------------------------------------*/
 .my-justify-end {
     margin-left: auto;
 }
@@ -196,7 +203,9 @@ div {
     justify-content: space-between;
 }
 
+/*----------------------------------------------------*/
 /* uprava zobrazovania recenzii */
+/*----------------------------------------------------*/
 .my-reviews-item {
     padding: 1rem;
     margin-bottom: 1rem;
@@ -221,7 +230,14 @@ div {
     text-align: right;
 }
 
+.my-reviews-row {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*----------------------------------------------------*/
 /* uprava vyberania poctu hviezdiciek */
+/*----------------------------------------------------*/
 div.stars {
     width: 270px;
     display: inline-block;
@@ -263,7 +279,10 @@ label.star:before {
     content: '\f006';
     font-family: FontAwesome;
 }
+
+/*----------------------------------------------------*/
 /* uprava pridavacieho formularu */
+/*----------------------------------------------------*/
 .my-justify-center {
     justify-content: center;
     display: flex;
@@ -275,4 +294,61 @@ label.star:before {
 
 .my-margin-top {
     margin-top: 1rem;
+}
+
+/*----------------------------------------------------*/
+/* uprava otacacej karty v zaujimavostiach o krajinach */
+/*----------------------------------------------------*/
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* Nastavujeme aby mala karta dve strany */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Nastavime, aby sa karta otocila ked na nu ukazeme mysou */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Nastavujeme poziciu prednej a zadnej strany */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Stylovanie prednej strany(keby nam chybal obrazok) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Stylovanie zadnej strany */
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.my-countries-row {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.my-country-label {
+    margin-bottom: 6px;
 }

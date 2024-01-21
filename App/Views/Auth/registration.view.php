@@ -36,8 +36,7 @@
                                    placeholder="Zadajte heslo" required>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-primary" type="submit" name="submit" id="button">Registrovať
-                            </button>
+                            <button class="btn btn-primary" type="submit" name="submit" id="button">Registrovať</button>
                         </div>
                     </form>
                 </div>

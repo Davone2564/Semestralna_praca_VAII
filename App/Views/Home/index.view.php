@@ -55,17 +55,17 @@
         <div class="col-lg-4">
             <img src="public/images/Flags.png" alt="Flags" width="140">
             <h2>Vlajky</h2>
-            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            <p><a class="btn btn-secondary" href="#">Pozri detaily »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <img src="public/images/Country.jpg" alt="Country" width="140">
             <h2>Krajiny</h2>
-            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            <p><a class="btn btn-secondary" href="#">Pozri detaily »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <img src="public/images/capital_city.jpg" alt="Country" width="140">
             <h2>Hlavné mestá</h2>
-            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            <p><a class="btn btn-secondary" href="#">Pozri detaily »</a></p>
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 

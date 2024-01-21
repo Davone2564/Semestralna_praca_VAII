@@ -36,7 +36,7 @@
                         </div>
                     <?php } ?>
                     <div class="m-2 d-flex my-justify-space-between gap-2">
-                        <?php if ($auth->isLogged() && $auth->getLoggedUserName() == $review->getAuthorName()) { ?>
+                        <?php if (($auth->isLogged() && $auth->getLoggedUserName() == $review->getAuthorName()) || $auth->getIfLoggedUserIsAdmin()) { ?>
                             <div>
                                 <a href="<?= $link->url('review.edit', [
                                         'id' => $review->getId(),

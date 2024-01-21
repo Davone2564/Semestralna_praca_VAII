@@ -26,7 +26,7 @@
                 <?php endif; ?>
                 <div class="input-group mb-3 has-validation">
                     <!--        <input type="text" class="form-control" name="picture" id="inputGroupFile02" value="--><?php //= @$data['post']?->getPicture() ?><!--">-->
-                    <input type="file" class="form-control " name="picture" id="inputGroupFile02">
+                    <input type="file" class="form-control " name="picture" id="inputGroupFile02" autofocus>
                 </div>
                 <div class="form-label-group mb-3">
                     <label for="name" class="form-label">Názov ubytovania:</label>
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="form-label-group mb-3">
-                    <label for="location" class="form-label">Názov lokácie:</label>
+                    <label for="location" class="form-label">Adresa:</label>
                     <input name="location" value="<?= @$data['offer']?->getLocation() ?>" type="text" id="location" class="form-control" placeholder="Zadajte adresu ubytovania"
                            required autofocus>
                 </div>

@@ -38,11 +38,12 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Zaujímavosti</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Afrika</a></li>
-                        <li><a class="dropdown-item" href="#">Amerika</a></li>
-                        <li><a class="dropdown-item" href="#">Austrália</a></li>
-                        <li><a class="dropdown-item" href="#">Ázia</a></li>
-                        <li><a class="dropdown-item" href="#">Európa</a></li>
+                        <li><a class="dropdown-item" href="<?=$link->url("country.index", ['continent' => "Afrika"])?>">Afrika</a></li>
+                        <li><a class="dropdown-item" href="<?=$link->url("country.index", ['continent' => "Ázia"])?>">Ázia</a></li>
+                        <li><a class="dropdown-item" href="<?=$link->url("country.index", ['continent' => "Austrália"])?>">Austrália</a></li>
+                        <li><a class="dropdown-item" href="<?=$link->url("country.index", ['continent' => "Európa"])?>">Európa</a></li>
+                        <li><a class="dropdown-item" href="<?=$link->url("country.index", ['continent' => "Severná Amerika"])?>">Severná Amerika</a></li>
+                        <li><a class="dropdown-item" href="<?=$link->url("country.index", ['continent' => "Južná Amerika"])?>">Južná Amerika</a></li>
                     </ul>
                 </li>
 

@@ -87,4 +87,9 @@ class DummyAuthenticator implements IAuthenticator
     {
         return $_SESSION['userID'];
     }
+
+    public function getIfLoggedUserIsAdmin(): bool
+    {
+        return $this->isLogged() && $_SESSION['admin'] == 1;
+    }
 }

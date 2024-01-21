@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="form-label-group mb-3">
-                    <label for="location" class="form-label">Názov lokácie:</label>
+                    <label for="location" class="form-label">Adresa:</label>
                     <input name="location" type="text" id="location" class="form-control" placeholder="Zadajte adresu ubytovania"
                            required autofocus>
                 </div>

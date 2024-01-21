@@ -33,7 +33,7 @@ $layout = 'offer';
                     </div>
                     <div class="m-2 d-flex my-justify-space-between gap-2">
                             <a href="<?= $link->url('review.index', ['id' => $offer->getId()]) ?>" class="btn btn-success">Recenzie</a>
-                        <?php if ($auth->isLogged() && $auth->getLoggedUserId() == $offer->getAuthorID()) { ?>
+                        <?php if (($auth->isLogged() && $auth->getLoggedUserId() == $offer->getAuthorID()) || $auth->getIfLoggedUserIsAdmin()) { ?>
                             <div>
                                 <a href="<?= $link->url('offer.edit', ['id' => $offer->getId()]) ?>" class="btn btn-primary">Upraviť</a>
                                 <a href="<?= $link->url('offer.delete', ['id' => $offer->getId()]) ?>"  class="btn btn-danger">Zmazať</a>
