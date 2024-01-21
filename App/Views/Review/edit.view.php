@@ -28,7 +28,7 @@
 
                 <input type="hidden" name="id" value="<?= @$data['review']?->getId() ?>">
                 <!-- tu bude ulozene id ponuky, ku ktorej chceme napisat recenziu -->
-                <input type="hidden" name="offerID" value="<?= @$data['offerID'] ?>">
+                <input type="hidden" name="offerID" value="<?= @$data['review']->getOfferID() ?>">
 
                 <div class="form-label-group mb-3">
                     <label class="form-label"><strong>Určte počet hviezd:</strong></label>
