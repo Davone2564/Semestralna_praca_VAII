@@ -30,10 +30,17 @@
                             <p class="my-error-message" id="error-msg-login">Prihlasovacie meno musí obsahovať aspoň tri písmená a len povolené znaky</p>
                         </div>
 
+                        <label for="password"><b>Heslo</b></label>
                         <div class="form-label-group mb-3">
-                            <label for="password"><b>Heslo</b></label>
-                            <input name="password" type="password" id="password" class="form-control"
-                                   placeholder="Zadajte heslo" required>
+                            <input name="password" oninput="passwordValidation()" type="password" id="password" class="form-control"
+                                   placeholder="Zadajte heslo" required autofocus>
+                        </div>
+
+                        <label for="password"><b>Heslo znova:</b></label>
+                        <div class="form-label-group mb-3">
+                            <input name="password-again" oninput="passwordValidation()" type="password" id="password-again" class="form-control"
+                                   placeholder="Zadajte heslo znova" required autofocus>
+                            <p class="my-error-message" id="error-msg-password">Heslá sa nezhodujú</p>
                         </div>
                         <div class="text-center">
                             <button class="btn btn-primary" type="submit" name="submit" id="button">Registrovať</button>
