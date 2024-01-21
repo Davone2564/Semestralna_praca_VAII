@@ -21,31 +21,31 @@
                 <input type="hidden" name="continent" value="<?= @$data['continent'] ?>">
 
                 <div class="form-label-group mb-3">
-                    <label for="name" class="form-label">Názov krajiny:</label>
+                    <label for="name" class="form-label"><strong>Názov krajiny:</strong></label>
                     <input name="name" type="text" id="name" class="form-control" placeholder="Zadajte názov krajiny"
                            required autofocus>
                 </div>
 
-                <label for="inputGroupFile02" class="form-label">Vložte obrázok vlajky danej krajiny:</label>
+                <label for="inputGroupFile02" class="form-label"><strong>Vložte obrázok vlajky danej krajiny:</strong></label>
                 <div class="input-group mb-3 has-validation">
                     <!--        <input type="text" class="form-control" name="picture" id="inputGroupFile02" value="--><?php //= @$data['post']?->getPicture() ?><!--">-->
                     <input type="file" class="form-control " name="flag" id="inputGroupFile02" required autofocus>
                 </div>
 
                 <div class="form-label-group mb-3">
-                    <label for="capital_city" class="form-label">Hlavné mesto:</label>
+                    <label for="capital_city" class="form-label"><strong>Hlavné mesto:</strong></label>
                     <input name="capital_city" type="text" id="capital_city" class="form-control" placeholder="Zadajte názov hlavného mesta krajiny"
                            required autofocus>
                 </div>
 
                 <div class="form-label-group mb-3">
-                    <label for="population" class="form-label">Počet obyvateľov:</label>
+                    <label for="population" class="form-label"><strong>Počet obyvateľov:</strong></label>
                     <input name="population" type="number" id="population" class="form-control" placeholder="Zadajte počet obyvateľov krajiny"
                            required autofocus>
                 </div>
 
                 <div class="form-label-group mb-3">
-                    <label for="area" class="form-label">Rozloha:</label>
+                    <label for="area" class="form-label"><strong>Rozloha:</strong></label>
                     <input name="area" type="number" id="area" class="form-control" placeholder="Zadajte rozlohu krajiny" required autofocus>
                 </div>
                 <div class="my-justify-center">

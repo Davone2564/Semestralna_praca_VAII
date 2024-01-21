@@ -31,7 +31,7 @@
                 <input type="hidden" name="offerID" value="<?= @$data['offerID'] ?>">
 
                 <div class="form-label-group mb-3">
-                    <label class="form-label">Určte počet hviezd:</label>
+                    <label class="form-label"><strong>Určte počet hviezd:</strong></label>
                     <div class="container d-flex justify-content-center mt-200">
                         <div class="row">
                             <div class="col-md-12">
@@ -57,13 +57,13 @@
                 </div>
 
                 <div class="form-label-group mb-3">
-                    <label for="pluses" class="form-label">Čo sa vám na ubytovaní páčilo?:</label>
+                    <label for="pluses" class="form-label"><strong>Čo sa vám na ubytovaní páčilo?:</strong></label>
                     <input name="pluses" type="text" id="pluses" class="form-control" placeholder="Zadajte plusy"
                             autofocus>
                 </div>
 
                 <div class="form-label-group mb-3">
-                    <label for="minuses" class="form-label">Čo sa vám na ubytovaní nepáčilo?:</label>
+                    <label for="minuses" class="form-label"><strong>Čo sa vám na ubytovaní nepáčilo?:</strong></label>
                     <input name="minuses" type="text" id="minuses" class="form-control" placeholder="Zadajte mínusy"
                             autofocus>
                 </div>
