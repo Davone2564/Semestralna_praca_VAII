@@ -10,19 +10,6 @@
     function checked() {
         document.getElementById("submit").disabled = false;
     }
-
-    var numberOfStars = "<?php echo $data['review']->getStars() ?>";
-    if (numberOfStars == "1") {
-        document.getElementById("star-1").checked = true;
-    } else if (numberOfStars == "2") {
-        document.getElementById("star-2").checked = true;
-    } else if (numberOfStars == "3") {
-        document.getElementById("star-3").checked = true;
-    } else if (numberOfStars == "4") {
-        document.getElementById("star-4").checked = true;
-    } else {
-        document.getElementById("star-5").checked = true;
-    }
 </script>
 
 <div class="container">
