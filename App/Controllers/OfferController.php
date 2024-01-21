@@ -9,6 +9,7 @@ use App\Core\Responses\RedirectResponse;
 use App\Core\Responses\Response;
 use App\Helpers\FileStorage;
 use App\Models\Offer;
+use App\Models\Review;
 
 class OfferController extends AControllerBase
 {
@@ -108,8 +109,15 @@ class OfferController extends AControllerBase
             throw new HTTPException(404);
         } else {
             FileStorage::deleteFile($offer->getPicture());
+            $reviews = Review::getAll();
+            foreach ($reviews as $review) {
+                if ($review->getOfferID() == $offer->getId()) {
+                    $review->delete();
+                }
+            }
+
             $offer->delete();
-            return new RedirectResponse($this->url("home.offers"));
+            return new RedirectResponse($this->url("offer.index"));
         }
     }
 
