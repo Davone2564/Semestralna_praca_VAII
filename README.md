@@ -1,3 +1,3 @@
 # Semestralna_praca_VAII
 
-Semestrálna práca z predmetu Vývoj aplikácií pre internet a intranet. Frontend vyvíjaný v CSS/HTML a backend vo fakultnom frameworku VAIICKO_FW. Ide o implementáciu webovej stránky  pomocou MVC architektúry.
+Semestrálna práca z predmetu Vývoj aplikácií pre internet a intranet. Frontend písaný v CSS/HTML s prvkami JavaScriptu a backend v jazyku PHP. Ide o implementáciu webovej stránky  pomocou MVC architektúry.
